@@ -14,6 +14,8 @@ body {
 .container {
   display: flex;
   align-items: stretch;
+  /* Evita el movimiento a los lados */
+  /* justify-content: space-between; */
   gap: 0 1.25rem;
   width: 88.5vw;
   height: 80vh;
