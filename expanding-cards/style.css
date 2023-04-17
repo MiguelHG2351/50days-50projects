@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  gap: 0 1.25rem;
+  width: 88.5vw;
+  height: 80vh;
+}
+
+.picture {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1.25s ease;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.picture.active {
+  flex: 1;
+  flex: auto;
+}
+
+.picture.active > .title {
+  transition: opacity 1.25s ease;
+  opacity: 1;
+}
+
+.picture:nth-child(1) {
+  min-width: 6%;
+  max-width: 1350px;
+  background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+}
+.picture:nth-child(2) {
+  min-width: 6%;
+  max-width: 1350px;
+  background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+}
+.picture:nth-child(3) {
+  min-width: 6%;
+  max-width: 1353px;
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');
+}
+.picture:nth-child(4) {
+  min-width: 6%;
+  max-width: 1351px;
+  background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');
+}
+.picture:nth-child(5) {
+  min-width: 6%;
+  max-width: 1350px;
+  background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+}
+
+.title {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+  right: 0;
+  font-weight: 500;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0;
+}
