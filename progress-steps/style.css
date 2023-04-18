@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f7fb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: min-width .5s ease;
+  left: 0;
+  /* 32 * n + 5 * n */
+  min-width: calc(32px * var(--count) + 5rem * var(--count));
+  height: 3px;
+  background-color: var(--line-border-fill);
+  z-index: 0;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: min-width .5s ease;
+  left: 0;
+  /* 32 * n + 5 * n */
+  min-width: 100%;
+  height: 3px;
+  background-color: var(--line-border-empty);
+  z-index: -1;
+}
+
+.number {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 16px;
+  background-color: #f6f7fb;
+  border-radius: 50%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.circle-svg {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  inset: 0 0 0 0;
+  fill: none;
+  stroke: var(--line-border-fill);
+  stroke-width: 3px;
+  overflow: visible;
+}
+
+.circle {
+  cx: 16px;
+  cy: 16px;
+  r: 16px;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: min-width .5s ease;
+  left: 0;
+  /* 32 * n + 5 * n */
+  min-width: calc(32px + 5rem);
+  height: 3px;
+  background-color: var(--line-border-fill);
+  z-index: 2;
+}
