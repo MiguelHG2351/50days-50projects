@@ -81,6 +81,16 @@ body {
   cx: 16px;
   cy: 16px;
   r: 16px;
+  transition: stroke-dashoffset .5s ease;
+}
+
+.number .circle {
+  stroke-dasharray: calc(2 * 3.1549 * 16);
+  stroke-dashoffset: calc(2 * 3.1549 * 16);
+}
+
+.number.active .circle {
+  stroke-dashoffset: 0;
 }
 
 .line {
