@@ -37,10 +37,14 @@ $prevBtn.addEventListener('click', function() {
   position-=1;
   $container.style.setProperty('--count', position)
 
+  if (position > 0) {
+    $nextBtn.removeAttribute('disabled')
+  }
   if (position === 0) {
     this.setAttribute('disabled', true)
     $nextBtn.removeAttribute('disabled')
   }
+
 
   $numbers.forEach((_$number, index) => {
     if ( index <= position) {

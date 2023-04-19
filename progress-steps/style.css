@@ -56,6 +56,7 @@ body {
 
 .number {
   position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,15 +69,29 @@ body {
   cursor: pointer;
 }
 
-.circle-svg {
+.number::after {
+  content: '';
   position: absolute;
   width: 32px;
   height: 32px;
   inset: 0 0 0 0;
+  border: 3px solid var(--line-border-empty);
+  overflow: visible;
+  z-index: 1;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.circle-svg {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  inset: 0px 0 0 0px;
   fill: none;
   stroke: var(--line-border-fill);
   stroke-width: 3px;
   overflow: visible;
+  z-index: 2;
 }
 
 .circle {
