@@ -82,6 +82,7 @@ body {
   cy: 16px;
   r: 16px;
   transition: stroke-dashoffset .5s ease;
+  transition-delay: 0s;
 }
 
 .number .circle {
@@ -91,6 +92,9 @@ body {
 
 .number.active .circle {
   stroke-dashoffset: 0;
+  /* transition-delay: .4s; */
+  --time: calc(.4 / var(--count));
+  transition-delay: var(--time)s;
 }
 
 .line {
