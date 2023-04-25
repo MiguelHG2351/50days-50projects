@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rotating Navigation</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
@@ -44,7 +48,23 @@
       </div>
     </main>
     <button class="btn-menu" aria-label="abrir menu">
-      <span class="btn-icon">
+      <div class="btn-icon">
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 96 960 960"
+            width="24"
+            >
+            <path
+              d="m254 897-94-95 225-226-225-226 94-96 226 226 226-226 94 96-225 226 225 226-94 95-226-226-226 226Z"
+              fill="white"
+            />
+          </svg>
+        </span>
+      </div>
+      <div class="btn-icon">
+        <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -53,21 +73,27 @@
           >
             <path
               d="M90 862V726h781v136H90Zm0-218V508h781v136H90Zm0-218V290h781v136H90Z"
+              fill="white"
             />
           </svg>
-      </span>
-      <span class="btn-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24"
-          viewBox="0 96 960 960"
-          width="24"
-        >
-          <path
-            d="m254 897-94-95 225-226-225-226 94-96 226 226 226-226 94 96-225 226 225 226-94 95-226-226-226 226Z"
-          />
-        </svg>
-      </span>
+        </span>
+      </div>
     </button>
+    <div class="sidenav">
+      <ul class="sidenav-list">
+        <li class="sidenav-item">
+          <span class="material-symbols-outlined"> home </span>
+          <span> Home </span>
+        </li>
+        <li class="sidenav-item">
+          <span class="material-symbols-outlined"> person </span>
+          <span> About </span>
+        </li>
+        <li class="sidenav-item">
+          <span class="material-symbols-outlined"> mail </span>
+          <span> Contact </span>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
